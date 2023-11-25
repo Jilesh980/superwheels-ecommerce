@@ -14,7 +14,7 @@ const navigation = [
   { name: 'Home', href: '/'},
   { name: 'Products', href: '/products'},
   { name: 'About', href: '/about'},
-  { name: 'Dealerships', href: '/dealerships'}
+  { name: 'Dealerships', href: '/dealership'}
 ]
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
