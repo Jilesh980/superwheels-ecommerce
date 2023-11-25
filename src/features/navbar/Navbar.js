@@ -11,10 +11,10 @@ const user = {
     'https://scontent.fmnl2-2.fna.fbcdn.net/v/t39.30808-6/379798906_6595027330583071_6322618597329491293_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeH4XssOwj4DvLqzqru-j4A-vlQIL7X82Oa-VAgvtfzY5sW22xBHsdKFEJaZoC2JBXl1sVj0wgZjhs34tKTNd22R&_nc_ohc=u1-BQZuIK3wAX_Ak5xy&_nc_oc=AQmu1j1lf2meyK9YH6suehAZW22IiX9bmKbeJx1bDR6wa0EsxpugBQ9Zs1CGVuKchOE&_nc_ht=scontent.fmnl2-2.fna&oh=00_AfDtxHVM1t_gLNdhP-f6FuFd4y318uXcH2_jEK3L-A6Buw&oe=655A33DF',
 }
 const navigation = [
-  { name: 'Home', href: '#', current: false },
-  { name: 'Products', href: '#', current: true },
-  { name: 'About', href: '#', current: false },
-  { name: 'Dealerships', href: '#', current: false }
+  { name: 'Home', href: '/'},
+  { name: 'Products', href: '/products'},
+  { name: 'About', href: '/about'},
+  { name: 'Dealerships', href: '/dealerships'}
 ]
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
@@ -30,7 +30,7 @@ function Navbar({children}) {
     return ( 
         <>
             <div className="min-h-full">
-                <Disclosure as="nav" className="bg-gray-800">
+                <Disclosure as="nav" className="bg-black">
                 {({ open }) => (
                     <>
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -52,7 +52,7 @@ function Navbar({children}) {
                                     className={classNames(
                                     item.current
                                         ? 'bg-gray-900 text-white'
-                                        : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                        : 'font-primary text-[1.2rem] text-white hover:bg-gray-700 hover:text-white',
                                     'rounded-md px-3 py-2 text-sm font-medium'
                                     )}
                                     aria-current={item.current ? 'page' : undefined}
@@ -68,7 +68,7 @@ function Navbar({children}) {
                             <Link to='/cart'>
                                 <button
                                     type="button"
-                                    className="bg-gray-800 rounded-full p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                    className="bg-black rounded-full p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
                                 >
                     
                                     <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
@@ -82,7 +82,7 @@ function Navbar({children}) {
                             {/* Profile dropdown */}
                             <Menu as="div" className="relative ml-3">
                                 <div>
-                                <Menu.Button className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                                <Menu.Button className="relative flex max-w-xs items-center rounded-full bg-black text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                     <span className="absolute -inset-1.5" />
                                     <span className="sr-only">Open user menu</span>
                                     <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
@@ -120,7 +120,7 @@ function Navbar({children}) {
                         </div>
                         <div className="-mr-2 flex md:hidden">
                             {/* Mobile menu button */}
-                            <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                            <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md bg-black p-2 text-white hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="absolute -inset-0.5" />
                             <span className="sr-only">Open main menu</span>
                             {open ? (
@@ -141,7 +141,7 @@ function Navbar({children}) {
                             as="a"
                             href={item.href}
                             className={classNames(
-                                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                item.current ? 'bg-gray-900 text-white' : 'text-white hover:bg-gray-700 hover:text-white',
                                 'block rounded-md px-3 py-2 text-base font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
@@ -157,12 +157,12 @@ function Navbar({children}) {
                             </div>
                             <div className="ml-3">
                             <div className="text-base font-medium leading-none text-white">{user.name}</div>
-                            <div className="text-sm font-medium leading-none text-gray-400">{user.email}</div>
+                            <div className="text-sm font-medium leading-none text-white">{user.email}</div>
                             </div>
                             <Link className='ml-auto' to='/cart'>
                                 <button
                                 type="button"
-                                className="flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                className="flex-shrink-0 rounded-full bg-black p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                                 >
                                 <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
                                 </button>
@@ -177,7 +177,7 @@ function Navbar({children}) {
                                 key={item.name}
                                 as="a"
                                 href={item.href}
-                                className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                                className="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
                             >
                                 {item.name}
                             </Disclosure.Button>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './pages/Home';
+import ProductPage from './pages/ProductPage';
 import LoginPage from './pages/LoginPage'
 import SignupPage from './pages/SignupPage'
 import {
@@ -9,22 +9,27 @@ import {
   Link,
 } from "react-router-dom";
 import CartPage from './pages/CartPage';
+import HomePage from './pages/HomePage';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (<Home />),
+    element: (<HomePage />),
   },
   {
-    path: "login",
+    path: "/products",
+    element: (<ProductPage />),
+  },
+  {
+    path: "/login",
     element: (<LoginPage />),
   },
   {
-    path: "sign-up",
+    path: "/sign-up",
     element: (<SignupPage />),
   },
   {
-    path: "cart",
+    path: "/cart",
     element: (<CartPage />),
   },
 ]);

@@ -1,7 +1,7 @@
 import Navbar from "../features/navbar/Navbar";
 import ProductList from "../features/product-list/productList"
 
-function Home() {
+function ProductPage() {
     return ( 
         <div>
             <Navbar>
@@ -11,4 +11,4 @@ function Home() {
      );
 }
 
-export default Home;
+export default ProductPage;

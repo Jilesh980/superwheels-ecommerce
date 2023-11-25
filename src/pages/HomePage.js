@@ -1,14 +1,14 @@
-import Cart from "../features/cart/Cart";
+import Home from "../features/home/Home";
 import Navbar from "../features/navbar/Navbar";
 
-function CartPage() {
-    return (
+function HomePage() {
+    return ( 
         <div>
             <Navbar>
-                <Cart />
+                <Home />
             </Navbar>
         </div>
      );
 }
 
-export default CartPage;
+export default HomePage;
