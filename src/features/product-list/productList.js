@@ -54,6 +54,15 @@ const products = [
     price: '₱37,000,000',
     color: 'Yellow',
   },
+  {
+    id: 4,
+    name: 'Lamborghini Aventador',
+    href: '#',
+    imageSrc: 'https://purepng.com/public/uploads/large/purepng.com-yellow-lamborghini-aventador-carcarvehicletransportlamborghini-961524660480glnlw.png',
+    imageAlt: "Lamborghini Aventador Yellow",
+    price: '₱37,000,000',
+    color: 'Yellow',
+  },
 ]
 
 const sortOptions = [
@@ -209,9 +218,9 @@ export default function Counter() {
               </Dialog>
             </Transition.Root>
 
-            <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <main className="max-w-8xl px-4 sm:px-6 lg:px-20">
               <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-                <h1 className="text-4xl font-bold tracking-tight text-gray-900">New Arrivals</h1>
+                <h1 className="text-5xl font-bold tracking-wide text-gray-900 font-primary">New Arrivals</h1>
 
                 <div className="flex items-center">
                   <Menu as="div" className="relative inline-block text-left">
@@ -328,10 +337,10 @@ export default function Counter() {
                   <div className="bg-white">
                     <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-2 lg:max-w-7xl lg:px-8">
                       <h2 className="text-2xl font-bold tracking-tight text-gray-900">Featured Cars</h2>
-                      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
                         {products.map((product) => (
                           <div key={product.id} className="group relative">
-                            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden  bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                               <img
                                 src={product.imageSrc}
                                 alt={product.imageAlt}
