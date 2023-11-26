@@ -30,7 +30,7 @@ function Navbar({children}) {
     return ( 
         <>
             <div className="min-h-full">
-                <Disclosure as="nav" className="bg-black">
+                <Disclosure as="nav" className="bg-[black]">
                 {({ open }) => (
                     <>
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -52,7 +52,7 @@ function Navbar({children}) {
                                     className={classNames(
                                     item.current
                                         ? 'bg-gray-900 text-white'
-                                        : 'font-primary text-[1.2rem] text-white hover:bg-gray-700 hover:text-white',
+                                        : 'font-primary text-[1.23rem] text-white hover:bg-gray-700 hover:text-white',
                                     'rounded-md px-3 py-2 text-sm font-medium'
                                     )}
                                     aria-current={item.current ? 'page' : undefined}
@@ -189,7 +189,7 @@ function Navbar({children}) {
                 )}
                 </Disclosure>
                 <main>
-                <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+                <div className="w-full">
                     {children}
                 </div>
                 </main>
